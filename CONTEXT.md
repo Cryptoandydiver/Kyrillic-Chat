@@ -94,8 +94,8 @@ Kyrillic-Chat/
 | Tech stack | kb (ariel-frischer/kb) + DeepSeek V4 via OpenRouter | Free infra, cheap tokens |
 | Trust model | On-prem installation only | Client data never leaves their server. AI is read-only + daily backups |
 | Lead gen | LinkedIn (direct messages) + Explee (cold email) | Two parallel channels, no tool overlap |
-| Demo | 3–5 sample files, 24h turnaround | Client sees results before committing, no access to their full DB |
-| Guarantee | Free demo (24h) + 7-day refund | Demo eliminates risk upfront. 7-day refund is short enough to protect us |
+| Demo | 3–5 files on OUR server, 7-day auto-expire | Client previews on our server, cannot keep the system. Full install on their server after payment only |
+| Guarantee | Free demo (24h, 7d expire on our server) + 7-day refund after installation | Demo can't be stolen (our server, 5 files, auto-expire). Refund period is short enough to protect us |
 | IP strategy | Skill-ify everything | skills/ folder = main business asset |
 
 ## Stack Choices

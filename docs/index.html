@@ -100,21 +100,21 @@
         <div class="step-num">1</div>
         <div>
           <h3>Send 3–5 sample documents</h3>
-          <p>That's it. No access to your whole database. We build a working demo with your real files so you can see the result before deciding.</p>
+          <p>We build a demo on our server using your real files. You get a link to test it — we keep your sample files secure, and the demo expires after 7 days.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">2</div>
         <div>
-          <h3>We install on your server (or ours)</h3>
-          <p>Your documents never leave your control. We install the system on your VPS or local machine — data stays behind your firewall. No third party has access.</p>
+          <h3>See the result before you pay</h3>
+          <p>Test the demo with your team. If it works — great. If not — no payment, no hard feelings. The demo was free either way.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">3</div>
         <div>
-          <h3>Your team asks, the system answers</h3>
-          <p>Plain English questions. Answers with citations in 3 seconds. No training needed.</p>
+          <h3>We install on your server</h3>
+          <p>After payment, we install the full system on your VPS or local machine. Your documents never leave your network. We access nothing.</p>
         </div>
       </div>
       <div class="step">
@@ -138,8 +138,8 @@
         <p>We install on your server or local machine. Your documents never leave your network. We access nothing — we just set up the software and guide you.</p>
       </div>
       <div class="option-card">
-        <h3><span>📄</span> Sample demo first</h3>
-        <p>Send us 3–5 documents (any format). We build a working demo in 24 hours. See exactly what you get before you commit to anything.</p>
+        <h3><span>📄</span> Demo with your files first</h3>
+        <p>Send 3–5 sample documents. We build a demo on our server in 24h — you get a private link to test it. Demo auto-expires after 7 days. If you like it, we install the full system on your server after payment. If not, cost: $0.</p>
       </div>
     </div>
   </div>
@@ -199,7 +199,7 @@
       </div>
     </div>
     <div class="guarantee">
-      <p>Free demo with your files (24h turnaround). Full setup paid only after you see it working. Then 7-day full refund if you're not satisfied.</p>
+      <p>Free demo with your files (24h, expires in 7 days). Full system on your server only after payment. 7-day refund if not satisfied.</p>
     </div>
   </div>
 </div>
@@ -264,7 +264,7 @@
     <div class="faq">
       <div class="faq-item">
         <h3>Do you get access to all my documents?</h3>
-        <p>No. You choose. Option 1: we install on your server — your data never leaves your network. Option 2: send us 3–5 sample files for a demo, and only if you decide to proceed do we set up the full system (still on your server).</p>
+        <p>No. For the demo, you send 3–5 sample files only. The demo runs on our server and expires after 7 days — it's not a working system you can keep. For the full system, we install on your server and never see your data.</p>
       </div>
       <div class="faq-item">
         <h3>What if the AI makes a mistake or deletes something?</h3>
@@ -283,8 +283,8 @@
         <p>Yes. No contracts. Month-to-month. If you cancel, the system keeps working — you just lose support and updates.</p>
       </div>
       <div class="faq-item">
-        <h3>What if it doesn't work for my team?</h3>
-        <p>You see a working demo with your own files before you pay anything (24h turnaround). After full setup, you have 7 days to verify it works. Full refund if not satisfied.</p>
+        <h3>Can I just use the demo without paying?</h3>
+        <p>The demo runs on our server with only 3–5 of your sample files and expires in 7 days. It's a preview to show you how it works — not a replacement for the full system. The full system on your server with all your documents only gets installed after payment.</p>
       </div>
     </div>
   </div>
@@ -304,14 +304,7 @@ document.querySelectorAll('.faq-item h3').forEach(function(btn) {
   });
 });
 
-// ─── FORMSPREE SETUP ───────────────────────────────────────────
-// Шаг 1. Открой https://formspree.io в браузере
-// Шаг 2. Нажми "Get started" → зарегистрируйся (Google или email)
-// Шаг 3. Нажми "New form" → введи название "AI Knowledge Base"
-// Шаг 4. Скопируй endpoint — он выглядит так: https://formspree.io/f/abcde123
-// Шаг 5. Вставь его вместо 'https://formspree.io/f/your-form-id' ниже
-// ────────────────────────────────────────────────────────────────
-var FORMSPREE_ENDPOINT = 'https://formspree.io/f/your-form-id';
+var FORMSPREE_ENDPOINT = 'https://formspree.io/f/xbdndlez';
 
 document.getElementById('leadForm').addEventListener('submit', function(e) {
   e.preventDefault();
