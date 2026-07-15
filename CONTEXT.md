@@ -14,7 +14,7 @@ SMBs (10–200 employees) drowning in their own documents: legal firms, manufact
 - **Installation:** $1,000–2,000 one-time (on your VPS/on-prem)
 - **Subscription:** $100–300/month (support + updates + token costs)
 - **Cost to deliver:** ~$0–5/month per client (DeepSeek V4 tokens + VPS)
-- **Guarantee:** 30-day risk-free. If it doesn't save time, don't pay.
+- **Guarantee:** Free demo with client's files (24h). Payment only after they see it working. 7-day refund after full setup.
 - **Trust model:** AI is read-only. No files are ever deleted or modified. Daily backups.
 
 ## Stages
@@ -95,7 +95,7 @@ Kyrillic-Chat/
 | Trust model | On-prem installation only | Client data never leaves their server. AI is read-only + daily backups |
 | Lead gen | LinkedIn (direct messages) + Explee (cold email) | Two parallel channels, no tool overlap |
 | Demo | 3–5 sample files, 24h turnaround | Client sees results before committing, no access to their full DB |
-| Guarantee | 30-day risk-free trial | No 5x claims — just "if it doesn't save time, don't pay" |
+| Guarantee | Free demo (24h) + 7-day refund | Demo eliminates risk upfront. 7-day refund is short enough to protect us |
 | IP strategy | Skill-ify everything | skills/ folder = main business asset |
 
 ## Stack Choices

@@ -199,7 +199,7 @@
       </div>
     </div>
     <div class="guarantee">
-      <p>30-day risk-free trial. If your team isn't saving time, you don't pay a cent.</p>
+      <p>Free demo with your files (24h turnaround). Full setup paid only after you see it working. Then 7-day full refund if you're not satisfied.</p>
     </div>
   </div>
 </div>
@@ -284,7 +284,7 @@
       </div>
       <div class="faq-item">
         <h3>What if it doesn't work for my team?</h3>
-        <p>30-day risk-free trial. If your team isn't saving time, you don't pay. No questions asked.</p>
+        <p>You see a working demo with your own files before you pay anything (24h turnaround). After full setup, you have 7 days to verify it works. Full refund if not satisfied.</p>
       </div>
     </div>
   </div>
@@ -304,10 +304,13 @@ document.querySelectorAll('.faq-item h3').forEach(function(btn) {
   });
 });
 
-// Form submission via Formspree
-// To make this work: 1. Go to https://formspree.io 2. Sign up (free)
-// 3. Create a new form 4. Copy the endpoint URL
-// 5. Replace the URL below
+// ─── FORMSPREE SETUP ───────────────────────────────────────────
+// Шаг 1. Открой https://formspree.io в браузере
+// Шаг 2. Нажми "Get started" → зарегистрируйся (Google или email)
+// Шаг 3. Нажми "New form" → введи название "AI Knowledge Base"
+// Шаг 4. Скопируй endpoint — он выглядит так: https://formspree.io/f/abcde123
+// Шаг 5. Вставь его вместо 'https://formspree.io/f/your-form-id' ниже
+// ────────────────────────────────────────────────────────────────
 var FORMSPREE_ENDPOINT = 'https://formspree.io/f/your-form-id';
 
 document.getElementById('leadForm').addEventListener('submit', function(e) {
