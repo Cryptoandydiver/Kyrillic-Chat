@@ -7,44 +7,49 @@ Build and scale a solo AI-product business focused on AI Knowledge Base as a Ser
 SMBs (10–200 employees) drowning in their own documents: legal firms, manufacturers, consultants, content creators. They have PDFs, Notion, SharePoint, Google Drive — no way to query it all in one place.
 
 ## Value Proposition
-"Your expertise, instantly searchable. We transform your documents into an AI knowledge base that answers any question in 3 seconds with citations. No more lost time hunting for files."
+"Search your documents in 3 seconds. Your files stay on your server — we never touch them. We install the system on your infrastructure, you keep full control."
 
 ## Pricing Model
-- **Installation:** $500–2,000 one-time (depends on document volume)
+- **Demo:** Free — send 3–5 sample files, get a working system in 24h
+- **Installation:** $1,000–2,000 one-time (on your VPS/on-prem)
 - **Subscription:** $100–300/month (support + updates + token costs)
 - **Cost to deliver:** ~$0–5/month per client (DeepSeek V4 tokens + VPS)
-- **Rule of 5x:** Client receives 5x more value than they pay
+- **Guarantee:** 30-day risk-free. If it doesn't save time, don't pay.
+- **Trust model:** AI is read-only. No files are ever deleted or modified. Daily backups.
 
 ## Stages
 
 ### Stage 1 — Foundation (Week 1–2)
 - [x] Business context defined
 - [x] Market research done (competitors, pricing, alternatives to Claude Code)
-- [ ] Skills folder created with templates for all stages
-- [ ] First AI agent built (trading/data — portfolio piece)
-- [ ] AI Knowledge Base product packaged and documented
-- [ ] GitHub repo structured and published
+- [x] Skills folder created (engineering, sales, delivery, operations)
+- [x] First AI agent built (trading/data CLI agent)
+- [x] AI Knowledge Base product packaged and documented
+- [x] GitHub repo structured and published
+- [x] Landing page created (GitHub Pages)
+- [x] Sales plan written (plain language)
+- [ ] Register Explee account, start first campaign
+- [ ] Record 2-min demo video
 
 ### Stage 2 — Product & Content (Week 3–4)
-- [ ] LinkedIn post: value-based pricing vs agency tax
+- [ ] LinkedIn post about the product (not value-based pricing)
 - [ ] LinkedIn post: AI Knowledge Base case study (before/after)
-- [ ] Cold email campaign: Instantly + Apollo + MCP
-- [ ] 3 client outreach templates written
-- [ ] Demo video: "Watch me set up an AI Knowledge Base in 15 minutes"
+- [ ] Cold email campaign via Explee
+- [ ] 5 client conversations started
+- [ ] Refine landing page based on real feedback
 
 ### Stage 3 — First Client (Week 5–8)
 - [ ] Close first client
-- [ ] Deliver installation
+- [ ] Deliver installation (on-prem / VPS)
 - [ ] Collect testimonial
 - [ ] Refine delivery process based on real feedback
-- [ ] Skill-ify everything learned
+- [ ] Add Explee results to sales playbook
 
 ### Stage 4 — Scale (Month 3+)
-- [ ] Hire VA for support
-- [ ] Automate onboarding
 - [ ] Increase prices
 - [ ] Build second product (trading agent SaaS)
 - [ ] Build third product (custom AI agents for SMBs)
+- [ ] Systematize: hire VA for support
 
 ## Architecture
 
@@ -71,6 +76,10 @@ Kyrillic-Chat/
 │       └── setup.sh
 ├── scripts/                      # Utility scripts
 │   └── deploy-knowledge-base.sh
+├── SALES_PLAN.md                 # Sales plan — plain language
+├── docs/                         # Landing page (GitHub Pages)
+│   ├── index.html
+│   └── _config.yml
 ├── SUMMARY.md                    # Chat export summary (existing)
 ├── BUSINESS_IDEAS.md             # Monetization ideas (existing)
 ├── AI_INSIGHTS.md                # AI tools & insights (existing)
@@ -83,10 +92,11 @@ Kyrillic-Chat/
 |----------|--------|-----|
 | Pricing | Value-based (not hourly) | Fee = share of monthly value for client |
 | Tech stack | kb (ariel-frischer/kb) + DeepSeek V4 via OpenRouter | Free infra, cheap tokens |
-| Positioning | "I build production systems, not prototypes" | Gap between vibecoding and production |
-| Lead gen | LinkedIn (personal brand) + Cold email (Instantly + Apollo) | Two parallel channels |
+| Trust model | On-prem installation only | Client data never leaves their server. AI is read-only + daily backups |
+| Lead gen | LinkedIn (direct messages) + Explee (cold email) | Two parallel channels, no tool overlap |
+| Demo | 3–5 sample files, 24h turnaround | Client sees results before committing, no access to their full DB |
+| Guarantee | 30-day risk-free trial | No 5x claims — just "if it doesn't save time, don't pay" |
 | IP strategy | Skill-ify everything | skills/ folder = main business asset |
-| Rule | 5x value guarantee | Client gets 5x more than they pay |
 
 ## Stack Choices
 
@@ -98,6 +108,8 @@ Kyrillic-Chat/
 | Alternative LLM | Ollama + Qwen 3.5 (local, no API cost) | Free (needs GPU) |
 | Obsidian integration | obsidian-local-llm-helper | Free |
 | Client dashboard | Open Web UI (optional) | Free |
+| Cold email outreach | Explee (AutoGTM) | $30 trial, ~$0.03/email |
+| Lead form | Formspree (or mailto fallback) | Free (50/mo) |
 
 ## Competition
 
