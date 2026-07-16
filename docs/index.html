@@ -200,7 +200,7 @@
           <li>Unlimited documents</li>
           <li>Unlimited users</li>
           <li>Custom integrations</li>
-          <li>Priority 4 hour SLA</li>
+          <li>Priority support during business hours</li>
         </ul>
         <a href="#estimate" class="btn btn-primary">Get a price</a>
       </div>
@@ -261,6 +261,10 @@
         <h3>Thanks! ✅</h3>
         <p>I will review your details and send a proposal within 24 hours. After that, you can share 3 to 5 sample files via email or Google Drive for your free demo.</p>
       </div>
+      <div class="form-error" id="formError" style="display:none;text-align:center;padding:40px 0;">
+        <h3 style="font-size:1.3rem;margin-bottom:8px;">Something went wrong</h3>
+        <p style="color:#555;margin-bottom:16px;">The form didn't send. You can <a href="#" id="retryLink" style="color:#1a1a2e;font-weight:600;">try again</a> or email me directly at the address I sent in my response.</p>
+      </div>
     </div>
   </div>
 </div>
@@ -296,6 +300,10 @@
       <div class="faq-item">
         <h3>Can I just use the demo without paying?</h3>
         <p>The demo runs on our server with only 3 to 5 of your sample files and expires in 7 days. It is a preview to show you how it works. It is not a replacement for the full system. The full system on your server with all your documents only gets installed after payment.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do I pay for AI usage separately?</h3>
+        <p>Yes. Anthropic bills you directly for AI usage — typically $10 to $40 per month depending on how much your team searches. The monthly subscription covers setup, support, and maintenance, not the AI tokens themselves.</p>
       </div>
     </div>
   </div>
@@ -334,15 +342,22 @@ document.getElementById('leadForm').addEventListener('submit', function(e) {
       document.getElementById('formSuccess').classList.add('show');
     } else {
       form.style.display = 'none';
-      document.getElementById('formSuccess').classList.add('show');
+      document.getElementById('formError').classList.add('show');
     }
   }).catch(function() {
     form.style.display = 'none';
-    document.getElementById('formSuccess').classList.add('show');
+    document.getElementById('formError').classList.add('show');
   }).finally(function() {
     btn.textContent = 'Send request →';
     btn.disabled = false;
   });
+});
+
+document.getElementById('retryLink').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('formError').classList.remove('show');
+  document.getElementById('formError').style.display = 'none';
+  document.getElementById('leadForm').style.display = 'block';
 });
 </script>
 </body>
