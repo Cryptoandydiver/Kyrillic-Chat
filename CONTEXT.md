@@ -83,7 +83,9 @@ Kyrillic-Chat/
 |----------|--------|-----|
 | Niche | Legal firms (3–10 attorneys) | High pain, high budget, compliance = on-prem advantage |
 | RAG engine | AnythingLLM (1 container) | Lightest deploy, web UI, PDF drag-drop, MIT, low maintenance |
-| LLM | DeepSeek V4 via OpenRouter | Best price/quality at ~$0.14/$0.28 per 1M tokens |
+| LLM (default) | Claude Haiku 4.5 | $1/$5 per 1M tokens, best speed/quality for daily searches |
+| LLM (complex) | Claude Sonnet 5 | $2/$10 per 1M tokens, intro until Aug 31. Legal benchmarks leader |
+| Model Router | AnythingLLM built-in | Auto-routes simple queries to Haiku, complex to Sonnet. No manual switching |
 | Trust model | On-prem installation | Data never leaves client's server. AI is read-only + daily backups |
 | Lead gen | LinkedIn (direct) + Explee (cold email) | Two parallel channels |
 | Demo | 3–5 files on OUR server, 7-day auto-expire | Client sees results before paying. Demo cannot be stolen (our server, 5 files, auto-expire) |
@@ -106,9 +108,11 @@ Kyrillic-Chat/
 | Component | Tool | Cost |
 |-----------|------|------|
 | RAG engine | AnythingLLM (Docker, 1 container) | Free (MIT) |
-| LLM | DeepSeek V4 via OpenRouter | ~$0.14/$0.28 per 1M tokens |
+| LLM (daily) | Claude Haiku 4.5 via Anthropic API | $1 / $5 per 1M tokens |
+| LLM (complex) | Claude Sonnet 5 via Anthropic API | $2 / $10 per 1M tokens (intro until Aug 31) |
+| Model Router | AnythingLLM built-in — auto routes simple queries to Haiku, complex to Sonnet | Built-in |
 | Hosting | VPS (1 CPU, 2GB RAM, 20GB SSD) | ~$5–10/month |
-| Alternative LLM | Ollama + Qwen 3.5 (local, no API cost) | Free (needs GPU) |
+| Embedding | AnythingLLM default (local) | Free |
 | Lead form | Formspree (50 free submissions/month) | Free |
 | File collection | Email or Google Drive link (not through form) | Free |
 | Cold email | Explee (AutoGTM) | $30 trial, ~$0.03/email |

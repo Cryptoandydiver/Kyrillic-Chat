@@ -21,11 +21,22 @@ docker run -d \
 
 1. Open `http://your-server-ip:3001` in browser
 2. Create admin account
-3. Select LLM provider: OpenAI-compatible
-   - Endpoint: `https://openrouter.ai/api/v1`
-   - Model: `deepseek/deepseek-v4`
-   - API Key: your OpenRouter key
+3. Select LLM provider: Anthropic
+   - API Key: your Claude API key
 4. Select embedding provider (default is fine)
+
+## Step 2b — Configure Model Router (automatic model switching)
+
+In Settings > Model Router, set up two models:
+
+| Model | Use case | Price per 1M tokens | Route rule |
+|-------|----------|---------------------|------------|
+| **Claude Haiku 4.5** | Daily questions, simple lookups | $1 / $5 | Default — all queries start here |
+| **Claude Sonnet 5** | Complex analysis, contract review | $2 / $10 (intro until Aug 31 2026) | Route when query suggests deep reasoning |
+
+Model Router automatically sends simple questions ("find clause X") to Haiku and complex ones ("analyze liability risks") to Sonnet. No manual switching.
+
+After Aug 31 2026, Sonnet 5 goes to standard $3 / $15. Difference on your volume (3-10 clients) is still negligible (~$2-5/month).
 
 ## Step 3 — Create Workspace and Upload Documents
 
@@ -44,7 +55,8 @@ docker run -d \
 - [ ] Docker installed
 - [ ] AnythingLLM container running
 - [ ] Admin account created
-- [ ] DeepSeek V4 configured via OpenRouter
+- [ ] Claude API key configured
+- [ ] Model Router set up (Haiku 4.5 default, Sonnet 5 for complex queries)
 - [ ] Workspace created for client
 - [ ] Client documents uploaded
 - [ ] 10 test queries verified
