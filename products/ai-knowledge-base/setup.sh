@@ -1,41 +1,37 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# AI Knowledge Base — Quick Setup Script
-# Run on Ubuntu 22.04 VPS (2 CPU, 4GB RAM, 20GB SSD)
+# AI Knowledge Base — Quick Setup Script (AnythingLLM)
+# Run on Ubuntu 22.04 VPS (1 CPU, 2GB RAM, 20GB SSD)
 
 echo "=== AI Knowledge Base Setup ==="
 
-# 1. Install kb
-if ! command -v kb &>/dev/null; then
-    echo "Installing kb..."
-    curl -fsSL https://raw.githubusercontent.com/ariel-frischer/kb/main/install.sh | bash
+# 1. Install Docker if not present
+if ! command -v docker &>/dev/null; then
+    echo "Installing Docker..."
+    curl -fsSL https://get.docker.com | bash
+    sudo usermod -aG docker "$USER"
 fi
 
-# 2. Check OpenRouter key
-if [ -z "${OPENROUTER_API_KEY:-}" ]; then
-    echo "Error: OPENROUTER_API_KEY is not set"
-    echo "Usage: export OPENROUTER_API_KEY=sk-... && ./setup.sh"
-    exit 1
-fi
+# 2. Deploy AnythingLLM
+echo "Deploying AnythingLLM..."
+docker run -d \
+  --name anythingllm \
+  --restart always \
+  -p 3001:3001 \
+  -v ~/anythingllm/data:/app/server/data \
+  -e STORAGE_DIR=/app/server/data \
+  mintplexlabs/anythingllm
 
-# 3. Set up kb config
-mkdir -p ~/.kb
-cat > ~/.kb/config.yaml << EOF
-llm:
-  model: deepseek/deepseek-v4
-  endpoint: https://openrouter.ai/api/v1
-  api_key: ${OPENROUTER_API_KEY}
-embedder:
-  type: default
-index:
-  chunk_size: 1000
-  chunk_overlap: 200
-EOF
-
+echo ""
 echo "=== Setup complete ==="
 echo ""
-echo "Next steps:"
-echo "  1. Copy documents to ~/documents/"
-echo "  2. kb add ~/documents/"
-echo "  3. kb query 'your first question'"
+echo "Open http://$(curl -s ifconfig.me):3001 in your browser"
+echo ""
+echo "Post-setup steps:"
+echo "  1. Create admin account"
+echo "  2. Go to Settings -> LLM Provider -> OpenAI compatible"
+echo "  3. Set endpoint: https://openrouter.ai/api/v1"
+echo "  4. Set model: deepseek/deepseek-v4"
+echo "  5. Set API key: your OpenRouter key"
+echo "  6. Create a workspace and upload documents"

@@ -1,68 +1,46 @@
-# План продаж — AI Knowledge Base
+# Sales Plan — Legal AI Knowledge Base
 
-## Что мы продаём (одним предложением)
-Поиск по документам компании за 3 секунды. Сотрудник пишет вопрос обычным языком — получает ответ с цитатой из исходного файла.
+## What we sell (one sentence)
+You find any contract clause in 5 seconds instead of 20 minutes of manual search. Your documents stay on your server. We never touch them.
 
-## Ключевое преимущество (доверие + защита)
-**Вы не рискуете ничем.**
-- Демо: 3–5 ваших файлов на НАШЕМ сервере, ссылка на 7 дней. Вы не получаете работающую систему — только смотрите, как это выглядит.
-- Полная установка: только после оплаты, на ВАШ сервер. Мы ничего не видим, не храним, не забираем.
-- Украсть демо нельзя — там 5 файлов, сервер наш, через 7 дней гаснет.
+## Who we sell to
+Small legal firms (3 to 10 attorneys). They have thousands of PDF contracts and case files. Confidentiality is critical. They do not have an IT department.
 
-## Кому продаём (3 типа клиентов)
+## Pricing (first 5 clients)
 
-| Тип | Пример | Почему им больно |
-|-----|--------|-----------------|
-| **Юридические фирмы** | Адвокаты, нотариусы, юротделы | Тысячи договоров, ищут прецеденты руками. Конфиденциальность критична |
-| **Производство** | Заводы, стройки, сервисные компании | Инженеры ищут спецификации и стандарты по папкам |
-| **Консалтинг / Образование** | Бизнес-школы, курсы, эксперты | Контент есть, доступа к нему нет. База знаний не структурирована |
+| Service | Price |
+|--------|-------|
+| Free demo with 3 to 5 of your PDFs (24h, on our server, expires in 7 days) | $0 |
+| Full installation on your VPS | $0 first time (for testimonial) |
+| Monthly support | $50 to $100/month |
+| Guarantee | See the demo before you pay. 7 day refund after install. |
 
-## Сколько продаём
+## How to find clients
 
-| Услуга | Цена |
-|--------|------|
-| Демо на 3–5 ваших документах | Бесплатно, 24 часа |
-| Полная установка (на ваш сервер) | $1,000–2,000 однократно |
-| Подписка (поддержка + обновления) | $200–300/мес |
-| Гарантия | Demo на нашем сервере (3–5 файлов, 7 дней expires). Полная установка — после оплаты. 7 дней на возврат после установки |
+### Channel 1: LinkedIn direct messages
+- Find partners at small law firms (3 to 10 attorneys)
+- Message: "I see your firm handles [practice area]. Do your attorneys waste time searching through contracts? I build a system that finds any clause in 5 seconds. Your data stays on your server. Free demo with your own files. Interested?"
 
-## Как находим клиентов (каналы)
+### Channel 2: Cold email (Explee)
+- Target: law firm partners, legal directors at small firms
+- Tool: Explee (finds prospects, writes emails, handles replies)
+- Cost: $30 to test, then ~$0.03 per email
 
-### Канал 1 — Личные сообщения (LinkedIn)
-- Найти владельцев юрфирм, директоров производств
-- Написать: «Вижу, у вас [X] человек ищут информацию по документам. Я делаю так, чтобы поиск занимал 3 секунды вместо 20 минут. Без доступа к вашим файлам — система на вашем сервере.»
-- Цель: отправить ссылку на лендинг или демо-видео (не звонок)
+### Channel 3: Legal industry referrals
+- One happy client refers to another firm
+- Requires first successful case study
 
-### Канал 2 — Telegram-чаты
-- Чаты предпринимателей, юристов, производственников
-- Не рекламировать — отвечать на вопросы про документооборот
-- Когда спросят «как» — рассказать про on-premise решение
+## Objection handling
 
-### Канал 3 — Холодные письма (Explee)
-- Инструмент: **Explee** (explee.com) — AI-рассылка, сам ищет лидов, пишет письма, отвечает на возражения
-- Цена: $30 на тест, дальше ~$0.03/письмо
-- Заменяет: Instantly + Apollo в одном флаконе
-- Запуск: когда будет первый кейс и отзыв (2–3 недели)
+| Objection | Response |
+|-----------|----------|
+| "I won't give you access to my documents" | You should not. The demo uses 3 to 5 files on our server that expire. Full system goes on your server. We never see your data. |
+| "ChatGPT is free" | ChatGPT does not know your documents. Our system searches only your contracts and cites the exact source. |
+| "There is free open source software for this" | Yes, there is. But it requires an engineer to deploy and maintain. You do not have an engineer. That is why you pay me. |
+| "Too expensive" | How much does it cost when a senior attorney spends 20 minutes searching for a clause at $300/hour? Do the math. |
 
-## Скрипт сообщения
+## First steps this week
 
-**LinkedIn / Email:**
-«Привет, [имя]. У вас [X] человек тратят время на поиск документов? Я настраиваю поиск, который работает за 3 секунды по всем файлам компании. Данные остаются на вашем сервере — я ничего не забираю. Вот как это выглядит: [ссылка на лендинг]. Посмотрите 2 минуты, и решите, актуально ли для вас.»
-
-## Что делать, если говорят «нет»
-
-| Возражение | Ответ |
-|-----------|--------|
-| «Я не дам доступ к документам» | Правильно. Я и не прошу. Система ставится на ваш сервер, данные не покидают вашу сеть. Я ничего не вижу. |
-| «ChatGPT бесплатно» | ChatGPT не знает ваши документы. Наша система знает и цитирует исходник. |
-| «Дорого» | Сколько стоит час времени 10 сотрудников, которые ищут документы? Посчитайте. |
-| «Подумаю» | «Отправлю вам ссылку на 2-минутное демо. Посмотрите, когда будет минута.» |
-| «Сами сделаем» | Отлично, вот ссылка на open-source инструмент. Если застрянете — я помогу за $200. |
-| «А если AI глюканет и удалит файлы?» | AI только читает. Он не может ничего удалить или изменить. Только поиск. Плюс ежедневные бэкапы. |
-
-## Первые шаги (эта неделя)
-
-1. Написать 10 владельцам юрфирм в LinkedIn
-2. Записать 2-минутное видео: как работает система на реальных документах (показать поиск)
-3. Зарегистрироваться в Explee ($30 на тест), настроить первую кампанию
-4. Обновить лендинг, если нужно
+1. Send 10 LinkedIn messages to law firm partners
+2. Register Explee, set up first campaign targeting legal
+3. Record a 2 minute video: search a contract clause in real time

@@ -1,26 +1,24 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Deploy AI Knowledge Base for a new client
-# Usage: ./deploy-knowledge-base.sh <client-name> <documents-path>
+# Deploy AnythingLLM for a new client
+# Usage: ./deploy-anythingllm.sh <client-name>
 
-CLIENT_NAME="${1:?Usage: $0 <client-name> <documents-path>}"
-DOCUMENTS_PATH="${2:?Usage: $0 <client-name> <documents-path>}"
+CLIENT_NAME="${1:?Usage: $0 <client-name>}"
 
-echo "=== Deploying KB for $CLIENT_NAME ==="
+echo "=== Deploying AnythingLLM for $CLIENT_NAME ==="
 
-# 1. Create client directory
-mkdir -p "/var/kb/${CLIENT_NAME}"
-cp -r "${DOCUMENTS_PATH}" "/var/kb/${CLIENT_NAME}/documents/"
+# 1. Create client data directory
+mkdir -p "/var/anythingllm/${CLIENT_NAME}"
 
-# 2. Index documents
-kb add "/var/kb/${CLIENT_NAME}/documents/"
-
-# 3. Run verification
-kb query "What is this knowledge base about?"
-
-# 4. Set up daily backup
-(crontab -l 2>/dev/null; echo "0 2 * * * kb backup /var/kb/${CLIENT_NAME}") | crontab -
+# 2. Deploy container
+docker run -d \
+  --name "anythingllm-${CLIENT_NAME}" \
+  --restart always \
+  -p 3001:3001 \
+  -v "/var/anythingllm/${CLIENT_NAME}:/app/server/data" \
+  mintplexlabs/anythingllm
 
 echo "=== Deployed $CLIENT_NAME ==="
-echo "Client can now query their knowledge base."
+echo "Client can access at http://$(curl -s ifconfig.me):3001"
+echo "Send them the welcome guide and schedule a 30 min training call."

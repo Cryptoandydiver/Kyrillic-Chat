@@ -1,47 +1,45 @@
 # Support Playbook
 
-## Common Issues & Fixes
+## Common Issues and Fixes
 
 ### "The answer is wrong"
-1. Check if the document is indexed: `kb list | grep keyword`
-2. Re-index the document: `kb update /path/to/doc.pdf`
+1. Check if the document is uploaded to the workspace
+2. Re upload the document
 3. Try rephrasing the query
-4. Check if the model is responding correctly: test with a simple query
 
-### "My new document isn't showing up"
-1. Check file format (PDF, DOCX, TXT, MD supported)
-2. Re-run: `kb add /path/to/new/file.pdf`
-3. Verify: `kb query "content from new file"`
+### "My new document is not showing up"
+1. Upload it through the workspace UI
+2. Wait 30 seconds for indexing
+3. Verify: ask a question about content from that document
 
-### "It's slow"
-1. Check VPS CPU/RAM: `htop`
-2. If LLM is slow, switch to smaller model (e.g., deepseek/deepseek-v3)
+### "It is slow"
+1. Check VPS CPU and RAM: `htop`
+2. Restart AnythingLLM: `docker restart anythingllm`
 3. Check OpenRouter status: https://status.openrouter.ai
 
-### "I can't access the web interface"
-1. Check if Docker container is running: `docker ps`
-2. Restart: `docker restart open-webui`
+### "I cannot access the web interface"
+1. Check if container is running: `docker ps | grep anythingllm`
+2. Restart: `docker restart anythingllm`
 3. Check firewall: `sudo ufw status`
 
-## Monthly Maintenance Tasks
+## Monthly Maintenance
 
-- [ ] Run `kb update --all` to refresh indexes
+- [ ] Run `docker pull mintplexlabs/anythingllm` to check for updates
+- [ ] Restart container if image was updated
 - [ ] Check disk usage: `df -h`
-- [ ] Check backup integrity
+- [ ] Verify backup integrity: check `~/anythingllm/data` exists and has recent files
 - [ ] Review usage stats and send to client
-- [ ] Send invoice
 
 ## Upsell Opportunities
 
 | Signal | Offer |
 |--------|-------|
-| Team asks 50+ questions/day | "Want a Slack bot integration?" +$100/mo |
-| Client adds 100+ docs/month | "Let me automate the ingestion" +$50/mo |
-| Client wants to share with customers | "Let me build you a customer-facing chatbot" +$200/mo |
-| Client wants analytics | "Here's a usage dashboard" +$50/mo |
+| Team asks 50+ questions per day | "Want a Slack bot integration?" +$100/mo |
+| Client adds 100+ docs per month | "Let me automate the ingestion" +$50/mo |
+| Client wants to share with clients | "Let me build a client facing chatbot" +$200/mo |
 
 ## Escalation
 
-- **Can't fix within 1 hour** → Inform client, offer temporary workaround
-- **Data loss** → Restore from backup
-- **Client wants refund** → Offer 2 free months instead
+- Cannot fix within 1 hour: Inform client, offer temporary workaround
+- Data loss: Restore from backup (`~/anythingllm/data`)
+- Client wants refund: Offer 2 free months instead
