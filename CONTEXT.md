@@ -44,9 +44,12 @@ Small legal firms (3–10 people) drowning in PDF contracts and case documents. 
 - [ ] Refine delivery process based on real feedback
 
 ### Stage 4 — Scale (Month 3+)
-- [ ] Increase price to $200–300/month
+- [ ] Increase price to $200–300/month (or 3–5x after first 5 clients)
 - [ ] Automate onboarding (scripted AnythingLLM deploy)
-- [ ] Build second product (trading agent SaaS)
+- [ ] Launch second vertical: compliance review automation for fintech/lenders
+      (same stack — AnythingLLM + Claude on documents — different niche)
+- [ ] Start niche email newsletter: practical AI tools for professional services
+      (ConvertKit/Beehiiv free tier, weekly 1-tool deep-dive, zero extra cost)
 - [ ] Systematize: document everything for repeatability
 
 ## Architecture
@@ -96,6 +99,9 @@ Kyrillic-Chat/
 | Email list | Hygiene, not product | Collect contacts from outreach responses. Not a monetisation asset until client base exists |
 | AI Readiness Audit | $350 paid, separate entry point | Paid lead magnet for skeptics. Even if no subscription sold, audit fee is earned. Honesty converts better than pitch |
 | Pricing (market reality) | $300/$1,000 is 10–50x below market | Custom RAG build starts at $4k–$18k. Legal AI tools charge $149–$329/seat. First 5 clients at intro price for case studies, then raise 3–5x |
+| kb-for-agents (olegvg) | Confirmed: personal pseudo-RAG, not client product | Obsidian + Claude for own consulting. Validates user's earlier conclusion |
+| Phase 4 vertical | Compliance review automation (fintech/lenders) | Same stack, different niche. Replaces accounting firms as Phase 4 priority |
+| Email newsletter | Niche AI tools for professional services | Phase 4 parallel asset. ConvertKit/Beehiiv free. Weekly 1-tool deep dive. Protects against LinkedIn dependency |
 
 ## Focus Rules (added Jul 2026)
 
@@ -103,6 +109,13 @@ Kyrillic-Chat/
 2. **Email list = hygiene, not project.** Save contacts who respond during outreach. One spreadsheet. Zero extra time. Not a product until client base exists.
 3. **All energy on one number: first paying client.** Outreach, landing page, demo delivery — everything else waits.
 4. **Proof gate for any new initiative:** "Is hypothesis #1 (legal AI knowledge base) confirmed by a paying client?" If no, do not start anything else.
+5. **Exception: email newsletter (Phase 4).** Niche AI tools for professional services is permissible as a parallel low-cost asset because: (a) zero financial cost (ConvertKit/Beehiiv free), (b) content reuses LinkedIn posts, (c) builds same audience, (d) protects against LinkedIn dependency. But — not before Phase 4.
+
+## External Validations
+
+- **kb-for-agents (olegvg):** Described as personal pseudo-RAG (Obsidian + Claude for own consulting), not a deployable client product. Confirms user's earlier conclusion: the stack is sold as consulting service, not as a product the client installs.
+- **Compliance automation kase:** Same tech stack, different niche. LLM reviews hundreds of ad creatives/month for fintech. Compliance officer does in days what took weeks, 95%+ pass rate. Natural Phase 4 vertical.
+- **Email as only durable asset:** Document independently states email list is the only reliable long-term asset and SEO for newsletters works because the market is unclaimed.
 
 ## Stack Comparison (Why AnythingLLM)
 
