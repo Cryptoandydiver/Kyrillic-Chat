@@ -92,6 +92,17 @@ Kyrillic-Chat/
 | Pricing (first clients) | Free setup + $50–100/mo in exchange for case study | No track record yet — need social proof |
 | Guarantee | Free demo + 7-day refund after install | Demo eliminates risk upfront |
 | IP strategy | Skill-ify everything | skills/ folder = main business asset |
+| Second niche (compliance) | Not before Phase 4 | After 3–5 paying legal clients + assistant hired. No data yet that first niche works. Spreading = the mistake we rejected at start |
+| Email list | Hygiene, not product | Collect contacts from outreach responses. Not a monetisation asset until client base exists |
+| AI Readiness Audit | $350 paid, separate entry point | Paid lead magnet for skeptics. Even if no subscription sold, audit fee is earned. Honesty converts better than pitch |
+| Pricing (market reality) | $300/$1,000 is 10–50x below market | Custom RAG build starts at $4k–$18k. Legal AI tools charge $149–$329/seat. First 5 clients at intro price for case studies, then raise 3–5x |
+
+## Focus Rules (added Jul 2026)
+
+1. **One niche, one product until first sale.** Compliance vertical is Phase 4 — after 3–5 paying legal clients + assistant hired. Not before.
+2. **Email list = hygiene, not project.** Save contacts who respond during outreach. One spreadsheet. Zero extra time. Not a product until client base exists.
+3. **All energy on one number: first paying client.** Outreach, landing page, demo delivery — everything else waits.
+4. **Proof gate for any new initiative:** "Is hypothesis #1 (legal AI knowledge base) confirmed by a paying client?" If no, do not start anything else.
 
 ## Stack Comparison (Why AnythingLLM)
 
