@@ -142,8 +142,8 @@
 
 <div class="section">
   <div class="container">
-    <h2>Two ways to work</h2>
-    <p style="color:#555;margin-bottom:16px;">Three ways to start. You choose what is comfortable for you.</p>
+    <h2>Three ways to start</h2>
+    <p style="color:#555;margin-bottom:16px;">You choose what is comfortable for you. You choose what is comfortable for you.</p>
     <div class="options">
       <div class="option-card">
         <h3><span>🔍</span> AI Readiness Audit <span class="tag">New</span></h3>
@@ -229,10 +229,21 @@
 
 <div class="section" id="estimate">
   <div class="container">
-    <h2 style="text-align:center">Get a price estimate</h2>
-    <p style="text-align:center;color:#555;margin-bottom:32px;">Leave your details. I will send you a proposal within 24 hours. No call required. After that, you can send 3 to 5 sample files via email or Google Drive for a free demo.</p>
+    <h2 style="text-align:center">Get started</h2>
+    <p style="text-align:center;color:#555;margin-bottom:32px;">Select your interest above. For an audit, I will send scheduling details within 24 hours. For a price estimate, I will send a proposal with next steps.</p>
     <div class="form-section">
       <form id="leadForm">
+        <div class="form-group">
+          <label>I am interested in:</label>
+          <div style="display:flex;gap:16px;margin-top:4px;">
+            <label style="display:flex;align-items:center;gap:6px;font-weight:400;font-size:0.95rem;cursor:pointer;">
+              <input type="radio" name="interest" value="price-estimate" checked> Price estimate
+            </label>
+            <label style="display:flex;align-items:center;gap:6px;font-weight:400;font-size:0.95rem;cursor:pointer;">
+              <input type="radio" name="interest" value="audit"> AI Readiness Audit ($350)
+            </label>
+          </div>
+        </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
           <div class="form-group">
             <label for="name">Your name</label>
@@ -275,7 +286,7 @@
       </form>
       <div class="form-success" id="formSuccess">
         <h3>Thanks! ✅</h3>
-        <p>I will review your details and send a proposal within 24 hours. After that, you can share 3 to 5 sample files via email or Google Drive for your free demo.</p>
+        <p id="successMessage">I will review your details and respond within 24 hours.</p>
       </div>
     </div>
   </div>
@@ -355,6 +366,13 @@ document.getElementById('leadForm').addEventListener('submit', function(e) {
   }).then(function(resp) {
     if (resp.ok) {
       form.style.display = 'none';
+      var interest = document.querySelector('input[name="interest"]:checked');
+      var msg = document.getElementById('successMessage');
+      if (interest && interest.value === 'audit') {
+        msg.textContent = 'I will send you scheduling details for your AI Readiness Audit within 24 hours.';
+      } else {
+        msg.textContent = 'I will review your details and send a proposal within 24 hours. After that, you can share 3 to 5 sample files via email or Google Drive for your free demo.';
+      }
       document.getElementById('formSuccess').classList.add('show');
     } else {
       btn.textContent = 'Something went wrong — please try again';
